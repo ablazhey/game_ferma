@@ -1,0 +1,27 @@
+ <div class="container">
+    <%= render 'navigate' %>
+ <div class="sell_milk"><%= render 'volume' %>
+  </div>
+  <div class= "container"><%= link_to "Продать молоко", { :controller=> "cow", :action=> "sell_milk"}, 
+              :class => "btn btn-inverse btn-mini", :onclick => 'sell_milk();', :remote => true %></div>
+  <div class="container">
+  <%=
+    link_to "Купить", { :controller => "cow", :action => "new" }, :id => "news", :class => "btn pull-right btn-success btn-mini", :onclick => 'cow_new();', :remote => true %>
+  
+  </div>
+  
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Имя</th>
+        <th>Возраст</th>
+        <th>Цена</th>
+        <th>Продать</th>
+      </tr>
+    </thead>
+    <tbody class="list">
+      <%= render 'cow' %>
+    </tbody>
+  </table>
+
+</div>

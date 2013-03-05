@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+  
+  <head>
+  <title>Ферма</title>
+  <%= stylesheet_link_tag    "bootstrap", :media => "all" %>
+  <%= stylesheet_link_tag    "bootstrap-responsive", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= javascript_include_tag "jquery.min.js" %>
+  <%= javascript_include_tag "bootstrap.min.js" %>
+  <%= csrf_meta_tags %>
+  </head>
+  <script> setTimeout(milk_add, 10000);</script>
+  <body>
+
+
+<%= yield %>
+
+</body>
+</html>

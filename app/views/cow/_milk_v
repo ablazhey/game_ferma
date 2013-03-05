@@ -1,0 +1,1 @@
+<%= "Надои "+@bank.volume_milk.to_s+"л., коров "+@cows.size.to_s+", в казне - "+@bank.many.to_s+"$"%>

@@ -1,0 +1,11 @@
+<% @cows.each do |cow| %>
+        <tr>
+          <td><%= cow.name %></td>
+          <td><%= cow.age %></td>
+          <td> 900 $</td>
+          <td>
+            <%= link_to "Продать", cow, :method=> "delete", 
+              :id => cow.id, :class => "btn btn-inverse btn-mini", :onclick => 'sell_cow('+cow.to_s+');', :remote => true %>
+          </td>
+        </tr>
+      <% end %>

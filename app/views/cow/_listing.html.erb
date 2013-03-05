@@ -1,0 +1,12 @@
+<% @cows.each do |cow| %>
+          	<tr>
+            <td><div class = "name"><%= cow.name %>
+              <%= link_to "Редактировать", edit_cow_path(cow), :class => "btn btn-success btn-mini"%></div>
+            </td>
+            <td><%= cow.age %></td>
+            <td><%= cow.milk %> л</td>
+            <td>
+              <%= link_to "Сдоить", { :controller => "cow", :action => "milk_destroy", :id => cow.id }, :class => "btn btn-primary btn-mini", :onclick => 'milk_d('+cow.id.to_s+');', :remote => true %>
+            </td>
+          </tr>
+          <% end %>
